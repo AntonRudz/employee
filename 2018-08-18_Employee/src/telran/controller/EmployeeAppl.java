@@ -30,11 +30,11 @@ boolean addEmployee(@RequestBody Employee employee) {
 	return employees.addEmployee(employee);
 }
 @DeleteMapping(value=EmployeeApi.REMOVE_EMPLOYEE)
-boolean removeEmployee(@RequestBody int id) {
+boolean removeEmployee(int id) {
 	return employees.removeEmployee(id);
 }
 @GetMapping(value=EmployeeApi.GET_EMPLOYEE)
-Employee getEmployee(@RequestBody int id) {
+Employee getEmployee(int id) {
 	return employees.getEmployee(id);
 }
 @GetMapping(value=EmployeeApi.GET_ALL_EMPLOYEES)
