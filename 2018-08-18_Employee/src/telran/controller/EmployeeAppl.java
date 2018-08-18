@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,7 +21,7 @@ import telran.interfaces.IEmployee;
 @RestController
 @ComponentScan("telran.model")
 @CrossOrigin
-public class EmployeeAnt {
+public class EmployeeAppl {
 @Autowired
 IEmployee employees;
 
@@ -44,6 +45,10 @@ Map<Integer, Employee> getAllEmployees(){
 int getSalaryBudget() {
 	return employees.computeSalaryBudjet();
 }
+public static void main(String[] args) {
+	SpringApplication.run
+	(EmployeeAppl.class, args);
 
+}
 
 }
